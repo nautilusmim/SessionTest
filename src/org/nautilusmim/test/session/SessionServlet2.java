@@ -39,7 +39,7 @@ public class SessionServlet2 extends HttpServlet {
 		out.println("Web应用程序中发生了" + (++count) + "次访问<br/>");
 		application.setAttribute("count", count);
 		
-		out.println("<a href='SessionServlet1'>访问SessionServlet1</a>");
+		out.println("<a href='" + resp.encodeURL("SessionServlet1") +  "'>访问SessionServlet1</a>");
 	}
 	
 }
